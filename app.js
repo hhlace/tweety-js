@@ -5,6 +5,8 @@ const app = express();
 const nunjucks = require('nunjucks');
 const routes = require('./routes');
 
+app.use(express.static('public'));
+
 app.use('/', routes);
 
 app.set('view engine', 'html'); // hace que res.render funcione con archivos html
